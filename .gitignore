@@ -1,0 +1,5 @@
+.vscode
+__pycache__
+article_project/__pycache__/
+articleapp/__pycache__/
+articleapp/migrations/__pycache__/

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} History - {% endblock title %}
+
+{% block content %}
+<div id="content" class="p-4 p-md-5 pt-5">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Order ID</th>
+          <th scope="col">Initial</th>
+          <th scope="col">Final</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for history in history_list %}
+        <tr>
+            <th scope="row">{{ history.orderId }}</th>
+            <td>{{ history.initial }}</td>
+            <td>{{ history.final }}</td>
+            <td style="color: darkgreen;">{{ history.status }}</td>
+            <td>{{ history.date|date:'Y-m-d H:i' }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+{% endblock content %}
